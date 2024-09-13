@@ -1,0 +1,86 @@
+[versions]
+core-ktx = "1.10.1"
+material-compose = "1.3.1"
+material = "1.10.0"
+activity-compose = "1.5.1"
+lifecycle = "2.5.1"
+navigation-compose = "2.7.5"
+appcompat = "1.6.1"
+org-jetbrains-kotlin-android = "1.8.10"
+coroutines = "1.7.3"
+kotlin = "1.8.10"
+junit = "4.13.2"
+androidx-test-ext-junit = "1.1.5"
+turbine = "0.12.1"
+mockk = "1.13.3"
+coroutines-test = "1.6.4"
+android-core-test = "1.0.0"
+mockito-core = "4.4.0"
+mockito = "4.4.0"
+junit-assertions = "1.0.0"
+truth = "1.0.0"
+testng-version = "6.9.6"
+junit-ktx-version = "1.1.5"
+hilt-navigation-version = "1.0.0"
+hilt-android-version = "2.44"
+ktor-core-version = "2.3.5"
+guava-version = "27.0.1-android"
+mockitokotlin = "2.2.0"
+data-store-version = "1.0.0"
+gson-version = "2.10.1"
+coil-version = "2.5.0"
+compose-preview-version = "1.1.1"
+palette-version = "1.0.0"
+ui-tooling = "1.6.1"
+
+[libraries]
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+material-compose = { group = "androidx.compose.material", name = "material", version.ref = "material-compose" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
+lifecycle-comose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle" }
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation-compose" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+coroutines-playservices = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services", version.ref = "coroutines" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+guava = { module = "com.google.guava:guava", version.ref = "guava-version" }
+data-store = { module = "androidx.datastore:datastore-preferences", version.ref = "data-store-version" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson-version" }
+coil = { module = "io.coil-kt:coil-compose", version.ref = "coil-version" }
+compose-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose-preview-version" }
+palette = { module = "androidx.palette:palette", version.ref = "palette-version" }
+
+#Dagger
+hilt-navigation = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-navigation-version" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt-android-version" }
+hilt-kapt = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt-android-version" }
+#Ktor
+ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor-core-version" }
+ktor-client = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor-core-version" }
+ktor-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor-core-version" }
+ktor-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor-core-version" }
+ktor-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor-core-version" }
+ktor-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor-core-version" }
+
+#Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+turbine = { module = "app.cash.turbine:turbine", name = "turbine", version.ref = "turbine" }
+mockito-core-test = { module = "org.mockito:mockito-core", version.ref = "mockito-core" }
+mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockito" }
+mockitokotlin = { module = "com.nhaarman.mockitokotlin2:mockito-kotlin", version.ref = "mockitokotlin" }
+android-core-test = { module = "androidx.test:core", version.ref = "android-core-test" }
+coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", name = "coroutines-test", version.ref = "coroutines-test" }
+junit-assertions-test = { module = "androidx.test.ext:junit", version.ref = "junit-assertions" }
+android-truth = { module = "androidx.test.ext:truth", version.ref = "truth" }
+junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junit-ktx-version" }
+testng = { group = "org.testng", name = "testng", version.ref = "testng-version" }
+ktor-test = { group = "io.ktor", name = "ktor-client-mock", version.ref = "ktor-core-version" }
+ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "ui-tooling" }
+
+[bundles]
+androidx = ["core-ktx", "appcompat", "material", "coroutines"]
+compose = ["material-compose", "activity-compose", "navigation-compose", "lifecycle-comose", "lifecycle", "coil", "compose-preview", "palette"]
+test = ["junit", "android-core-test", "junit-ktx", "junit-assertions-test", "android-truth", "testng", "mockito-core-test", "coroutines-test", "mockito-inline", "mockitokotlin"]
+ktor = ["ktor-client", "ktor-core", "ktor-android", "ktor-logging", "ktor-serialization", "ktor-negotiation"]
